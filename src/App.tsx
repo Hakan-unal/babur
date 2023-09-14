@@ -50,7 +50,6 @@ const App = () => {
     showNotification("error", "Uyarı", "Hop hemşerim nereye formda eksik alanlar var", null)
   };
 
-  if (loading) return <Row justify={"center"}><Spin size="large" /></Row>
 
 
 
@@ -84,6 +83,7 @@ const App = () => {
         >
 
           <Form.Item
+
             name="content"
             label="Message"
             rules={[{ required: true, message: 'Required' }]}
@@ -97,7 +97,7 @@ const App = () => {
           </Form.Item>
 
           <Form.Item >
-            <Button block ghost htmlType="submit">
+            <Button disabled={loading} block ghost htmlType="submit">
               Send
             </Button>
           </Form.Item>
