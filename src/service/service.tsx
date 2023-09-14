@@ -7,9 +7,9 @@ type FormValues = {
 
 
 
-export const postMessage = (payload: FormValues) => axios.post('https://babur.vercel.app/chatgpt', payload)
+export const postMessage = (payload: FormValues) => axios.post('https://supabase-puce.vercel.app/chatgpt', payload)
     .then((response) => {
-        return response
+        return response.data.message
     })
     .catch((error) => {
         return error
