@@ -36,7 +36,6 @@ const App = () => {
     tempArr.push(response.choices[0].message)
 
     setMessages(tempArr)
-    showNotification("success", "Information", "response", null)
     setLoading(false)
   }
 
